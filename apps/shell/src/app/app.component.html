@@ -1,0 +1,37 @@
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <svg class="angular-logo" viewBox="0 0 24 24" role="img" aria-label="Angular Shell Logo">
+        <path fill="#dd0031" d="M12 2.5l8.84 3.15-1.92 13.65L12 21.5l-6.92-2.19L3.16 5.65 12 2.5zm0 2.36L5.72 7.29l1.15 8.16L12 17.64l5.13-2.19 1.15-8.16L12 4.86z"/>
+      </svg>
+      <span class="brand-text">Microfrontend Shell</span>
+    </div>
+    <ul class="navbar-menu">
+      <li class="menu-item menu-home">
+        <a
+          routerLink="home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: false }"
+          class="menu-link menu-home"
+          aria-label="Home (React)"
+        >
+          Home
+          <span class="framework-badge react-badge" title="Built with React">React</span>
+        </a>
+      </li>
+      <li class="menu-item menu-quiz">
+        <a
+          routerLink="quiz"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: false }"
+          class="menu-link menu-quiz"
+          aria-label="Quiz (Angular)"
+        >
+          Quiz
+          <span class="framework-badge angular-badge" title="Built with Angular">Angular</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

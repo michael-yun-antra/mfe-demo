@@ -1,0 +1,4 @@
+{
+  "quiz": "http://localhost:4209/mf-manifest.json",
+  "home": "http://localhost:4206/mf-manifest.json"
+}

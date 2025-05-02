@@ -1,0 +1,58 @@
+<div class="container">
+    <header class="header">
+      <h1 aria-label="Angular Quiz">Angular Quiz</h1>
+      <h2>
+        Powered by Angular
+        <span class="angular-badge" title="Built with Angular">Angular</span>
+      </h2>
+      <!-- <svg class="angular-logo" viewBox="0 0 24 24" role="img" aria-label="Angular Logo">
+        <path fill="#dd0031" d="M12 2.5l8.84 3.15-1.92 13.65L12 21.5l-6.92-2.19L3.16 5.65 12 2.5zm0 2.36L5.72 7.29l1.15 8.16L12 17.64l5.13-2.19 1.15-8.16L12 4.86z"/>
+      </svg> -->
+    </header>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <span>Shell</span> → <span class="active">Quiz</span>
+    </nav>
+    <main>
+      <p class="intro">
+        Test your Angular knowledge with this interactive quiz, built using Angular’s standalone components and two-way binding.
+      </p>
+      <form #quizForm="ngForm" (ngSubmit)="submitQuiz()">
+        <div *ngFor="let question of questions" class="question">
+          <p class="question-text">{{ question.text }}</p>
+          <div *ngFor="let option of question.options" class="option">
+            <input
+              type="radio"
+              [name]="'q' + question.id"
+              [(ngModel)]="answers[question.id]"
+              [value]="option"
+              [id]="'q' + question.id + '-' + option"
+              required
+            />
+            <label [for]="'q' + question.id + '-' + option">{{ option }}</label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="submit-button"
+          [disabled]="!quizForm.valid"
+          aria-label="Submit Quiz"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          class="reset-button"
+          (click)="resetQuiz()"
+          aria-label="Reset Quiz"
+        >
+          Reset
+        </button>
+      </form>
+      <div *ngIf="showResults" class="results" role="alert">
+        <p>
+          Your score: {{ score }} / {{ questions.length }}
+          ({{ (score / questions.length * 100).toFixed(0) }}%)
+        </p>
+      </div>
+    </main>
+  </div>

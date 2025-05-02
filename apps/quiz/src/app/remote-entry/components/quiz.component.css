@@ -1,0 +1,144 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #dd0031;
+  }
+  
+  .header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .angular-badge {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    color: #ffffff;
+    background-color: #dd0031;
+    padding: 2px 6px;
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: default;
+  }
+  
+  .angular-logo {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .breadcrumb span {
+    font-weight: 500;
+  }
+  
+  .breadcrumb .active {
+    color: #dd0031;
+  }
+  
+  .intro {
+    color: #4a5568;
+    margin-bottom: 16px;
+  }
+  
+  .question {
+    margin-bottom: 24px;
+  }
+  
+  .question-text {
+    font-weight: 500;
+    color: #1a202c;
+    margin-bottom: 8px;
+  }
+  
+  .option {
+    margin-bottom: 8px;
+  }
+  
+  .option input {
+    margin-right: 8px;
+  }
+  
+  .option label {
+    color: #4a5568;
+  }
+  
+  .submit-button, .reset-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 8px;
+  }
+  
+  .submit-button {
+    background-color: #dd0031;
+    color: #ffffff;
+  }
+  
+  .submit-button:hover {
+    background-color: #b91c1c;
+  }
+  
+  .submit-button:focus {
+    outline: 2px solid #f87171;
+    outline-offset: 2px;
+  }
+  
+  .submit-button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  .reset-button {
+    background-color: #6b7280;
+    color: #ffffff;
+  }
+  
+  .reset-button:hover {
+    background-color: #4b5563;
+  }
+  
+  .reset-button:focus {
+    outline: 2px solid #9ca3af;
+    outline-offset: 2px;
+  }
+  
+  .results {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  .results p {
+    color: #4a5568;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
